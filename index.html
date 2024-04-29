@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image.jpg" type="image" sizes="16x16">
+    <title>ezyNotes</title>
+    <style>
+        /* CSS Styles */
+        /* Body style */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar style */
+        .navbar {
+            background-color: #343a40; /* Dark blue navbar */
+            color: #ffffff; /* White text */
+            padding: 10px 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Container style */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Note style */
+        .note {
+            background-color: #ffc0cb; /* Pink background */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Note title style */
+        .note-title {
+            margin-bottom: 10px;
+        }
+
+        /* Notes section style */
+        #notes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Note card style */
+        .noteCard {
+            background-color: #ffffff; /* White background */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        /* Button style */
+        .btn-danger {
+            margin-top: 10px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand">ezyNotes</a>
+            <form class="d-flex">
+                <input class="form-control me-2" id="searchtxt" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Hello, Welcome to ezyNotes !!</h1>
+        <div class="note">
+            <div class="note-body">
+                <div class="mb-3">
+                    <form action="/action_page.php">
+                        <label for="notetitle" class="form-label">Add Title</label>
+                        <input type="text" class="form-control" id="notetitle" required>
+                        <label for="addtxt" class="form-label">Add your Note</label>
+                        <textarea required class="form-control" id="addtxt" rows="3"></textarea>
+                        <button class="btn btn-primary my-3" type="button" id="addnote">Add Note</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <h2>Your Notes</h2>
+        <div class="row container-fluid" id="notes">
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
+
